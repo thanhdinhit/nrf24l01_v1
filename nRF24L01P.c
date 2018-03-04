@@ -52,7 +52,7 @@ Eduardo Guilherme Brandt  17/11/2011   */
 ////////////////////////////////////////////////////////////////////////////////////////// 
 // 
 // 
-#ifndef RF24_CS 
+/*#ifndef RF24_CS 
    #ERROR pino RF24_CS nao definido 
 #endif 
 #ifndef RF24_CE 
@@ -72,16 +72,13 @@ Eduardo Guilherme Brandt  17/11/2011   */
 #endif 
 #ifdef RF24_USE_DMA        //nRF24 uses SPI DMA for multiple byte transfers 
    #warning Please, check if "spi_dma.c" is included 
-#endif 
-/*#ifdef RF24_PERFORMANCE_MODE       //performance mode ON 
-   #warning RF24 in performance mode. Not all call functions parameters checks are make. 
-#endif*/ 
+#endif  
 #ifndef RF24_SPI_DISABLE_WARNING 
    #warning Initialize RF24_SPI stream for SPI communication with nRF24L01, as below: 
    #warning #USE SPI(SPI1, MASTER, BAUD=1000000, MODE=0, BITS=8, MSB_FIRST, STREAM=RF24_SPI) //this will set SPI in 4MHz(maximum for 16MHz Xtal. #Use SPI is a little buggy) 
    #warning At V4.124 compiler version, SPI must be SPI2, due to CCS compiler bug 
-   #warning #define RF24_SPI_DISABLE_WARNING  for disabling nRF24 SPI warning message. 
-#endif 
+   #warning #define RF24_SPI_DISABLE_WARNING  for disabling nRF24 SPI warning message.*/ 
+//#endif 
 #ifndef RF24_PWUPDELAY  
    #define  RF24_PWUPDELAY()  delay_ms(2)       //Delay power on nRF24L01+ 
 #endif 
